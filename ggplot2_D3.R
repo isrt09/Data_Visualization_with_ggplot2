@@ -6,7 +6,6 @@ boxplot(USJudgeRatings$RTEN, horizontal = TRUE, xlab = "Lawyer Ratings")
 boxplot(USJudgeRatings$RTEN, horizontal = TRUE, notch =  TRUE, xlab = "Lawyer Ratings")
 boxplot(USJudgeRatings$RTEN, horizontal = TRUE, notch =  TRUE, xlab = "Lawyer Ratings", ylim = c(0,10)
 boxplot(USJudgeRatings$RTEN, horizontal = TRUE, notch =  TRUE, xlab = "Lawyer Ratings", ylim = c(0,10))
-boxplot(USJudgeRatings$RTEN, horizontal = TRUE, notch =  TRUE, xlab = "Lawyer Ratings", ylim = c(0,10),col = "slategory")
 boxplot(USJudgeRatings$RTEN, horizontal = TRUE, notch =  TRUE, xlab = "Lawyer Ratings", ylim = c(0,10),col = "slategray3")
 boxplot(USJudgeRatings$RTEN, horizontal = TRUE, notch =  TRUE, xlab = "Lawyer Ratings", ylim = c(0,10),col = "slategray3",boxwex = 0.5)
 boxplot(USJudgeRatings$RTEN, horizontal = TRUE, notch =  TRUE, xlab = "Lawyer Ratings", ylim = c(0,10),col = "slategray3",boxwex = 0.5,whisklty = 1)
@@ -31,3 +30,19 @@ ggplot(data=cars_merc, aes(x = carname, y = mpg)) + geom_point(aes(color = cyl, 
 ggplot(data = cars_merc, aes(mpg)) 
 ggplot(data = cars_merc, aes(mpg)) + geom_area(stat = "bin", binwidth = 1)
 ggplot(data = cars_merc, aes(mpg)) + geom_area(stat = "bin", binwidth = 2)
+
+ggplot(data = cars_merc, aes(mpg))  + geom_density(color="red")
+
+ggplot(data = cars_merc, aes(mpg))  + geom_dotplot(binwidth=3)
+ggplot(data = cars_merc, aes(mpg))  + geom_dotplot(binwidth=1)
+
+ggplot(data = cars_merc, aes(mpg))  + geom_freqpoly()
+ggplot(data = cars_merc, aes(mpg))  + geom_freqpoly(color="red")
+
+ 
+ ggplot(data = cars_merc, aes(mpg))+ geom_bar()
+ ggplot(data = cars,      aes(cyl))+ geom_bar()
+ ggplot(data = cars_merc, aes(cyl))+ geom_bar()
+ ggplot(data = cars_merc, aes(cyl))+ geom_bar(color="red")
+ 
+

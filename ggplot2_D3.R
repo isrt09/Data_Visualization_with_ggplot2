@@ -40,9 +40,22 @@ ggplot(data = cars_merc, aes(mpg))  + geom_freqpoly()
 ggplot(data = cars_merc, aes(mpg))  + geom_freqpoly(color="red")
 
  
- ggplot(data = cars_merc, aes(mpg))+ geom_bar()
- ggplot(data = cars,      aes(cyl))+ geom_bar()
- ggplot(data = cars_merc, aes(cyl))+ geom_bar()
- ggplot(data = cars_merc, aes(cyl))+ geom_bar(color="red")
+ggplot(data = cars_merc, aes(mpg))+ geom_bar()
+ggplot(data = cars,      aes(cyl))+ geom_bar()
+ggplot(data = cars_merc, aes(cyl))+ geom_bar()
+ggplot(data = cars_merc, aes(cyl))+ geom_bar(color="red")
  
+ggplot(data = car,  aes(mpg, wt)) + geom_polygon(aes())
+ggplot(data = cars, aes(mpg, wt)) + geom_rect(xmin =  mpg,y = wt))
+ggplot(data = car,  aes(mpg, wt)) + geom_rect(aes(xmin=mpg,ymin=wt,xmax=mpg+0.5,ymax=wt+1))
+ggplot(data = cars, aes(mpg, wt)) + geom_rect(aes(xmin=mpg,ymin=wt,xmax=mpg+0.5,ymax=wt+1))
+
+
+ggplot(data=car,aes(mpg,wt))
+ggplot(data=car,aes(mpg,wt)) + geom_blank()
+ggplot(data=car,aes(mpg,wt)) + geom_point()
+ggplot(data=car,aes(wt))     + geom_dotplot(binwidth=2)
+ggplot(data=car,aes(mpg))    + geom_dotplot(binwidth=2)
+ggplot(data=car,aes(mpg,wt)) + geom_jitter()
+
 
